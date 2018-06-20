@@ -15,6 +15,9 @@
 @property (nonatomic,strong)NSArray<NSArray*> *imagesArray;
 @property (weak, nonatomic) IBOutlet UICollectionView *imagesCollection;
 @property (nonatomic, strong)NSArray *nameOfHeaders;
+@property (nonatomic,strong) NSArray *skyArray;
+@property (nonatomic,strong) NSArray *otherArray;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControlOutlet;
 
 @end
 
@@ -31,16 +34,17 @@
                           [[Pictures alloc]initWithImage:[UIImage imageNamed:@"sky2"] name:@"sky2"],
                           [[Pictures alloc]initWithImage:[UIImage imageNamed:@"sky3"] name:@"sky3"],
                           [[Pictures alloc]initWithImage:[UIImage imageNamed:@"sky4"] name:@"sky4"]];
-    
+    self.skyArray = skyArray;
     NSArray *everythingElseArray = @[[[Pictures alloc]initWithImage:[UIImage imageNamed:@"1"] name:@"1"],
     [[Pictures alloc]initWithImage:[UIImage imageNamed:@"2"] name:@"2"],
     [[Pictures alloc]initWithImage:[UIImage imageNamed:@"3"] name:@"3"],
     [[Pictures alloc]initWithImage:[UIImage imageNamed:@"4"] name:@"4"],
     [[Pictures alloc]initWithImage:[UIImage imageNamed:@"5"] name:@"5"],
     [[Pictures alloc]initWithImage:[UIImage imageNamed:@"6"] name:@"6"]];
+    self.otherArray = everythingElseArray;
     
     self.imagesArray = @[skyArray, everythingElseArray];
-    self.nameOfHeaders = @[@"Animals", @"everything Else"];
+    self.nameOfHeaders = @[@"Animals", @"Everything Else"];
 //    NSArray *skyArray = @[[UIImage imageNamed:@"sky1"], [UIImage imageNamed:@"sky2"], [UIImage imageNamed:@"sky3"], [UIImage imageNamed:@"sky4"]];
 //    NSArray *everythingElse = @[[UIImage imageNamed:@"1"], [UIImage imageNamed:@"2"], [UIImage imageNamed:@"3"], [UIImage imageNamed:@"4"], [UIImage imageNamed:@"5"], [UIImage imageNamed:@"6"]];
 //    self.imagesArray = [NSArray arrayWithObjects:skyArray, everythingElse, nil];
@@ -60,10 +64,13 @@
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+//    if ([self.segmentedControlOutlet selectedSegmentIndex] == 0){
+        NSLog(@"WORKING");
     NSLog(@"%ld", [[self.imagesArray objectAtIndex:section] count]);
     return [[self.imagesArray objectAtIndex:section] count];
     
-    
+//    }
+    return [[self.imagesArray objectAtIndex:section] count];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -77,9 +84,7 @@
     
     //VVVV this doesn't work because it's not sending me a string back, its sending me a UIImage
     //    cell.imageView.image = [UIImage imageNamed:[self.imagesArray[indexPath.section] objectAtIndex:indexPath.row]];
-    
-    
-    
+
     return cell;
 }
 
@@ -89,13 +94,30 @@
     HeaderCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
        
         NSString *headerString = [self.nameOfHeaders objectAtIndex: indexPath.section];
-        
-        
-        
+
         NSString *title = headerString;
         headerView.headerLabel.text = title;
         reusableView = headerView;
+        
+
     }
     return reusableView;
 }
+- (IBAction)controlPressed:(UISegmentedControl *)sender {
+    if (sender.selectedSegmentIndex == 0) {
+        
+        [self.imagesCollection reloadData];
+        NSLog(@"showing animals");
+    //filter array
+    } else {
+        NSLog(@"Showing everything else");
+        [self.imagesCollection reloadData];
+    }
+    
+}
+
+
+
+
+
 @end

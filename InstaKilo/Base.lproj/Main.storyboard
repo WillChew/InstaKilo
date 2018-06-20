@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dG1-3N-xzF">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="gUw-U6-nv9">
                                     <size key="itemSize" width="50" height="50"/>
@@ -74,12 +74,25 @@
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="7PW-tw-WP4"/>
                                 </connections>
                             </collectionView>
+                            <segmentedControl opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Li9-WK-Td4">
+                                <rect key="frame" x="127" y="619" width="121" height="29"/>
+                                <segments>
+                                    <segment title="Animals"/>
+                                    <segment title="Other"/>
+                                </segments>
+                                <connections>
+                                    <action selector="controlPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="jrV-2h-Pdd"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dG1-3N-xzF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="VHD-a8-zCQ"/>
+                            <constraint firstItem="Li9-WK-Td4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="13N-SP-klP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dG1-3N-xzF" secondAttribute="bottom" constant="56" id="FZG-Fs-Xps"/>
                             <constraint firstItem="dG1-3N-xzF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XvM-Zu-UOm"/>
                             <constraint firstItem="dG1-3N-xzF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="afe-D8-zkM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Li9-WK-Td4" secondAttribute="trailing" constant="127" id="nDQ-Ph-vDF"/>
+                            <constraint firstItem="Li9-WK-Td4" firstAttribute="top" secondItem="dG1-3N-xzF" secondAttribute="bottom" constant="8" id="s4H-La-VhW"/>
                             <constraint firstItem="dG1-3N-xzF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xgW-XG-24T"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -87,6 +100,7 @@
                     <navigationItem key="navigationItem" id="7Tk-91-369"/>
                     <connections>
                         <outlet property="imagesCollection" destination="dG1-3N-xzF" id="ZXe-oi-u1C"/>
+                        <outlet property="segmentedControlOutlet" destination="Li9-WK-Td4" id="WD9-Qf-s3n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
