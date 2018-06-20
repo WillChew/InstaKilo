@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "ImageCellCollectionViewCell.h"
 
-@interface ViewController ()
+@interface ViewController () <UICollectionViewDataSource>
 
 @end
 
@@ -26,4 +27,17 @@
 }
 
 
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+return 100;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    ImageCellCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ImageCell" forIndexPath:indexPath];
+    
+   
+    
+    
+    return cell;
+}
 @end

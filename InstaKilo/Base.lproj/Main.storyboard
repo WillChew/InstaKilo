@@ -28,15 +28,32 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="7Ti-SK-Jmr">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="7Ti-SK-Jmr" customClass="ImageCellCollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UFb-3T-BrR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="UFb-3T-BrR" secondAttribute="trailing" id="0Kd-Uf-V7l"/>
+                                            <constraint firstItem="UFb-3T-BrR" firstAttribute="top" secondItem="7Ti-SK-Jmr" secondAttribute="top" id="3V6-Z6-My9"/>
+                                            <constraint firstItem="UFb-3T-BrR" firstAttribute="leading" secondItem="7Ti-SK-Jmr" secondAttribute="leading" id="T8C-yL-JO0"/>
+                                            <constraint firstAttribute="bottom" secondItem="UFb-3T-BrR" secondAttribute="bottom" id="ZQN-MZ-nxp"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="UFb-3T-BrR" id="IWc-Xr-P3q"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="7PW-tw-WP4"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

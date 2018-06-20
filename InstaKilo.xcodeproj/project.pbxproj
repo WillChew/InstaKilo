@@ -13,6 +13,7 @@
 		2180E5E920DABD0100E7AC61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2180E5E820DABD0100E7AC61 /* Assets.xcassets */; };
 		2180E5EC20DABD0100E7AC61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2180E5EA20DABD0100E7AC61 /* LaunchScreen.storyboard */; };
 		2180E5EF20DABD0100E7AC61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180E5EE20DABD0100E7AC61 /* main.m */; };
+		2180E5F720DABFC700E7AC61 /* ImageCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180E5F620DABFC700E7AC61 /* ImageCellCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		2180E5EB20DABD0100E7AC61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2180E5ED20DABD0100E7AC61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2180E5EE20DABD0100E7AC61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2180E5F520DABFC700E7AC61 /* ImageCellCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCellCollectionViewCell.h; sourceTree = "<group>"; };
+		2180E5F620DABFC700E7AC61 /* ImageCellCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCellCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +61,13 @@
 		2180E5DE20DABCFF00E7AC61 /* InstaKilo */ = {
 			isa = PBXGroup;
 			children = (
+				2180E5E520DABCFF00E7AC61 /* Main.storyboard */,
 				2180E5DF20DABCFF00E7AC61 /* AppDelegate.h */,
 				2180E5E020DABCFF00E7AC61 /* AppDelegate.m */,
 				2180E5E220DABCFF00E7AC61 /* ViewController.h */,
 				2180E5E320DABCFF00E7AC61 /* ViewController.m */,
-				2180E5E520DABCFF00E7AC61 /* Main.storyboard */,
+				2180E5F520DABFC700E7AC61 /* ImageCellCollectionViewCell.h */,
+				2180E5F620DABFC700E7AC61 /* ImageCellCollectionViewCell.m */,
 				2180E5E820DABD0100E7AC61 /* Assets.xcassets */,
 				2180E5EA20DABD0100E7AC61 /* LaunchScreen.storyboard */,
 				2180E5ED20DABD0100E7AC61 /* Info.plist */,
@@ -143,6 +148,7 @@
 			files = (
 				2180E5E420DABCFF00E7AC61 /* ViewController.m in Sources */,
 				2180E5EF20DABD0100E7AC61 /* main.m in Sources */,
+				2180E5F720DABFC700E7AC61 /* ImageCellCollectionViewCell.m in Sources */,
 				2180E5E120DABCFF00E7AC61 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
