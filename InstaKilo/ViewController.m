@@ -14,6 +14,7 @@
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (nonatomic,strong)NSArray<NSArray*> *imagesArray;
 @property (weak, nonatomic) IBOutlet UICollectionView *imagesCollection;
+@property (nonatomic, strong)NSArray *nameOfHeaders;
 
 @end
 
@@ -39,6 +40,7 @@
     [[Pictures alloc]initWithImage:[UIImage imageNamed:@"6"] name:@"6"]];
     
     self.imagesArray = @[skyArray, everythingElseArray];
+    self.nameOfHeaders = @[@"Animals", @"everything Else"];
 //    NSArray *skyArray = @[[UIImage imageNamed:@"sky1"], [UIImage imageNamed:@"sky2"], [UIImage imageNamed:@"sky3"], [UIImage imageNamed:@"sky4"]];
 //    NSArray *everythingElse = @[[UIImage imageNamed:@"1"], [UIImage imageNamed:@"2"], [UIImage imageNamed:@"3"], [UIImage imageNamed:@"4"], [UIImage imageNamed:@"5"], [UIImage imageNamed:@"6"]];
 //    self.imagesArray = [NSArray arrayWithObjects:skyArray, everythingElse, nil];
@@ -67,7 +69,8 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     ImageCellCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ImageCell" forIndexPath:indexPath];
-
+    
+//important
     Pictures *pic = self.imagesArray[indexPath.section][indexPath.row];
     cell.imageView.image = pic.image;
 
@@ -84,7 +87,12 @@
     UICollectionReusableView *reusableView = nil;
     if (kind == UICollectionElementKindSectionHeader) {
     HeaderCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
-        NSString *title = [[NSString alloc]initWithFormat:@"%ld",indexPath.section + 1];
+       
+        NSString *headerString = [self.nameOfHeaders objectAtIndex: indexPath.section];
+        
+        
+        
+        NSString *title = headerString;
         headerView.headerLabel.text = title;
         reusableView = headerView;
     }
