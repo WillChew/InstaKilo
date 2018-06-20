@@ -51,7 +51,7 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="HeaderView" id="q9t-Fq-ZU5">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="HeaderView" id="q9t-Fq-ZU5" customClass="HeaderCollectionReusableView">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -66,6 +66,9 @@
                                         <constraint firstItem="hVj-yv-ULd" firstAttribute="centerY" secondItem="q9t-Fq-ZU5" secondAttribute="centerY" id="BVY-5Q-imV"/>
                                         <constraint firstItem="hVj-yv-ULd" firstAttribute="centerX" secondItem="q9t-Fq-ZU5" secondAttribute="centerX" id="h7V-K3-GbH"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="headerLabel" destination="hVj-yv-ULd" id="XQV-Nl-6iE"/>
+                                    </connections>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="7PW-tw-WP4"/>
