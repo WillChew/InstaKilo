@@ -14,6 +14,7 @@
 		2180E5EC20DABD0100E7AC61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2180E5EA20DABD0100E7AC61 /* LaunchScreen.storyboard */; };
 		2180E5EF20DABD0100E7AC61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180E5EE20DABD0100E7AC61 /* main.m */; };
 		2180E5F720DABFC700E7AC61 /* ImageCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180E5F620DABFC700E7AC61 /* ImageCellCollectionViewCell.m */; };
+		2180E5FA20DADAC500E7AC61 /* Pictures.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180E5F920DADAC500E7AC61 /* Pictures.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		2180E5EE20DABD0100E7AC61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2180E5F520DABFC700E7AC61 /* ImageCellCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCellCollectionViewCell.h; sourceTree = "<group>"; };
 		2180E5F620DABFC700E7AC61 /* ImageCellCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCellCollectionViewCell.m; sourceTree = "<group>"; };
+		2180E5F820DADAC500E7AC61 /* Pictures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pictures.h; sourceTree = "<group>"; };
+		2180E5F920DADAC500E7AC61 /* Pictures.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pictures.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				2180E5E020DABCFF00E7AC61 /* AppDelegate.m */,
 				2180E5E220DABCFF00E7AC61 /* ViewController.h */,
 				2180E5E320DABCFF00E7AC61 /* ViewController.m */,
+				2180E5F820DADAC500E7AC61 /* Pictures.h */,
+				2180E5F920DADAC500E7AC61 /* Pictures.m */,
 				2180E5F520DABFC700E7AC61 /* ImageCellCollectionViewCell.h */,
 				2180E5F620DABFC700E7AC61 /* ImageCellCollectionViewCell.m */,
 				2180E5E820DABD0100E7AC61 /* Assets.xcassets */,
@@ -149,6 +154,7 @@
 				2180E5E420DABCFF00E7AC61 /* ViewController.m in Sources */,
 				2180E5EF20DABD0100E7AC61 /* main.m in Sources */,
 				2180E5F720DABFC700E7AC61 /* ImageCellCollectionViewCell.m in Sources */,
+				2180E5FA20DADAC500E7AC61 /* Pictures.m in Sources */,
 				2180E5E120DABCFF00E7AC61 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
